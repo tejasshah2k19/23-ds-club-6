@@ -1,0 +1,19 @@
+array -> linear datastructure 
+
+index wise insertion and deletion 
+
+-------------------------------------------------------------------
+
+
+Stack -> add : PUSH , remove : POP , display , peep
+
+LIFO -> Last in First Out 
+
+whatsapp -> 8.10 | 8.20 | 9.00  => 9.00 | 8.20  | 8.10  
+
+gmail -> X Y Z ->  Z Y X 
+
+
+gallery ->  1 2 3 4 -> 4 3  2 1 
+
+?LIFO -> 
