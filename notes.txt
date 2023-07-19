@@ -16,4 +16,67 @@ gmail -> X Y Z ->  Z Y X
 
 gallery ->  1 2 3 4 -> 4 3  2 1 
 
-?LIFO -> 
+?LIFO -> book -> 
+
+
+
+stack 
+
+4: 50  TOP 
+3: 45
+2: 34
+1: 53
+0: 23
+
+PEEP -> 
+
+enter location 
+3
+34
+
+4:      
+3:  
+2: 34 TOP 
+1: 53
+0: 23
+
+enter location 
+3
+23 
+
+location  = 3 
+index = 
+
+
+
+
+4:     
+3: 45 TOP 
+2: 34
+1: 53
+0: 23
+
+location : 3 
+53 
+
+
+index = top - location + 1 
+
+----------------------------------------------------------------------------------------
+
+amazon 
+flipkart 
+
+10 product qty => 20 buy 
+
+FiFo -> First In First Out 
+
+Queue --> 
+
+5 -> 
+     
+Queue ->   Y Z A  B|  
+           F      R  {max 5} 
+
+           insertion -> BACK
+           deletion  -> FRONT 

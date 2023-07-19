@@ -56,17 +56,24 @@ public:
             }
         }
     }
+
+    void peep(int location)
+    {
+        int index = top - location + 1;
+        cout << "\n"
+             << s[index];
+    }
 };
 
 int main()
 {
     Stack stack;
-    int choice, num;
+    int choice, num, location;
     // condition -> true | false -> 1 2 3 -1 -3 any TRUE   { 0 FALSE }
     while (1)
     {
         cout << endl
-             << "1 For PUSH\n2 For POP\n3 For Display\n0 Exit";
+             << "1 For PUSH\n2 For POP\n3 For Display\n4 for PEEP\n0 Exit";
         cout << endl
              << "Enter your choice";
         cin >> choice;
@@ -84,6 +91,11 @@ int main()
         case 3:
             stack.display();
             break;
+        case 4:
+            cout << endl
+                 << "Enter Location";
+            cin >> location;
+            stack.peep(location);
         case 0:
             exit(0);
         default:
