@@ -80,3 +80,60 @@ Queue ->   Y Z A  B|
 
            insertion -> BACK
            deletion  -> FRONT 
+
+----------------------------------------------------------------------------------------
+
+stack --- queue 
+CARDS 8 
+masterDeck [ 10 5 25 22 63 63 22 9 ] 
+
+X                           Y
+[10,25,63,22]               [5,22,63,9]  -> distribution 
+
+
+battle 
+    10,5
+
+X:[25,63,22]               Y:[22,63,9] 
+
+10 > 5 -> 10 -> X is Winner 
+
+X:[25,63,22,10,5]               Y:[22,63,9] 
+
+
+battle
+25,22
+X:[63,22,10,5]               y:[,63,9] 
+X is Winner 
+X:[63,22,10,5,25,22]         y:[63,9] 
+
+battle 
+63,63
+X:[22,10,5,25,22]         y:[9]
+tie 
+next battle 
+63,63,22,9
+X:[10,5,25,22]         y:[]
+X is Winner 
+X:[10,5,25,22,63,63,22,9]         y:[]
+
+battle -> Y IS Empty -> 
+
+STOP -> Declare -> X IS THE WINNER OF THE GAME 
+
+1) when deck of any player is empty - opponenet player declare as winner
+2) your game perform maximum 1000 battle,after 1000 battle declare TIE in GAME 
+3) Once the GAME OVER you can print entire deck of winner    
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+

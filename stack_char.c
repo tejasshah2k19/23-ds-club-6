@@ -62,7 +62,7 @@ int main()
         case 1:
             printf("\nEnter String::");
             fflush(stdin);
-            gets(str); // royaleduationindiaguj
+            gets(str); // royaleduationindiaguj  -> 18
 
             for (i = 0; str[i] != '\0'; i++)
             {
