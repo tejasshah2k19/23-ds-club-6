@@ -6,16 +6,19 @@ char stack[SIZE];
 char str[SIZE];
 int top = -1; // empty
 
-void push(char c)
+int push(char c)
 {
     if (top == SIZE - 1)
     {
         printf("\nStack OVERFLOW  - MAX SIZE %d", SIZE); // sdjflkjdsdklfslkfslddsjfkljsdf
+        top = -1;                                        // sdjfklsdjflksdflksdflksjdf
+        return 0;                                        // false
     }
     else
     {
         top++;
         stack[top] = c;
+        return 1; // true
     }
 }
 void pop()
@@ -48,7 +51,7 @@ void display()
 
 int main()
 {
-    int choice, i;
+    int choice, i, ans;
     while (1)
     {
         printf("\n1 For PUSH\n2 For POP\n3 For Display\n0 For Exit\nEnter Your Choice");
@@ -59,11 +62,15 @@ int main()
         case 1:
             printf("\nEnter String::");
             fflush(stdin);
-            gets(str); // royal
+            gets(str); // royaleduationindiaguj
 
             for (i = 0; str[i] != '\0'; i++)
             {
-                push(str[i]); // 0:r  1:o  2:y  3:a  4:l  5:X
+                ans = push(str[i]); // 0:r  1:o  2:y  3:a  4:l  5:X
+                if (ans == 0)
+                {
+                    break;
+                }
             }
             break;
         case 2:
