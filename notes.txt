@@ -85,10 +85,10 @@ Queue ->   Y Z A  B|
 
 stack --- queue 
 CARDS 8 
-masterDeck [ 10 5 25 22 63 63 22 9 ] 
+masterDeck [ 10 5 25 22 63 63 22 9 ]  {Q}
 
 X                           Y
-[10,25,63,22]               [5,22,63,9]  -> distribution 
+[10,25,63,22]  {Q}             [5,22,63,9] {Q} -> distribution 
 
 
 battle 
