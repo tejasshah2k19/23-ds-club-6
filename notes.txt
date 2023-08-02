@@ -130,8 +130,89 @@ STOP -> Declare -> X IS THE WINNER OF THE GAME
 
 
 
+stack -> expression evaluate -> 
+
+notation 
+
+1) infix notation   => a+b 
+2) prefix notation  => operator pref => +ab
+3) postfix notation => post =>  ab+ 
 
 
+infix to prefix and infix postfix 
+
+ =>  a + b -c
+     +ab - c
+     -+abc 
+
+     a + b - c 
+     ab+   -  c 
+     ab+c-
+
+
+     a + b - c * d / f - g * c 
+     a + b - *cd / f - g *  c 
+     a + b - /*cdf - g * c 
+     a + b - /*cdf - *gc 
+     +ab -   /*cdf - *gc
+     -+ab/*cdf - *gc
+     --+ab/*cdf*gc
+
+
+    a + (b - c) * d / (f - g) * c 
+    a + -bc * d / -fg * c 
+    +a*/*-bcd-fgc
+
+    a + b - c $ d * g $ f ^ c 
+    -+ab*$cd$g^fc 
+    
+
+    a + b / c * d / f $ x ^ z 
+
+    +a/*/bcd$f^xz 
+    
+
+postfix using STAcK
+  a + b - c * d 
+  ab+cd*- 
+  
+1) operand -> string 
+2) operator -> stack 
+3) same level operator -> not in stack 
+4) lower level comes first then higher leve [ -*   , not work -> *- ]  
+  
+  input         string        stack 
+  a             a 
+  +             a               + 
+  b             ab              + 
+  -             ab+             -
+  c             ab+c            -
+  *             ab+c            -*
+  d             ab+cd          -* 
+                ab+cd*-
+
+ -----------------------------------------------
+
+simple queue 
+
+
+_   20 30 40 50 
+    f        r 
+
+
+
+
+
+
+
+    
+
+
+     
+
+
+
+ 
 
 
 

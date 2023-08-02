@@ -40,7 +40,7 @@ public:
         }
         else
         {
-            num = q[front];
+            num = q[front]; // delete num
             if (front == rear)
             {
                 front = -1;
