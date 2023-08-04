@@ -198,6 +198,61 @@ simple queue
 
 _   20 30 40 50 
     f        r 
+insert - enqueue 
+dequeue 
+
+--------------------------------------------
+
+int a ; //4 byte -> implicit -> release free -> ? 
+scope 
+
+int j;
+
+void add(){
+  int g;//4 byte
+}
+
+main(){
+
+    int k; //4 byte 
+  add(); 
+}//end 
+
+
+1)static memory allocation :  implicit
+2)dynamic memory allocation : explicit
+
+
+int a[5];
+
+add -> allocate -> 
+delete -> free release
+
+
+c : calloc , malloc 
+  : free 
+  : realloc 
+
+c++ : new keyword 
+      delete keyword 
+
+java : new , null ,gc 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
