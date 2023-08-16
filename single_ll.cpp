@@ -28,19 +28,38 @@ public:
 
 int main()
 {
+    Node *head = NULL;
+    Node *last = NULL;
 
-    Node *head = new Node();
-    head->setData(100);
-    head->setNext(NULL);
+    int choice;
+    int num;
+    while (1)
+    {
 
-    Node *tmp = new Node();
-    tmp->setData(500);
-    tmp->setNext(NULL);
-
-    head->setNext(tmp);
-
-    cout << head->getData();
-    cout << endl
-         << head->getNext()->getData();
+        cout << "\n0 For Exit\n1 For Add\n2 For List\nEnter choice";
+        cin >> choice;
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter number";
+            cin >> num;
+            if (head == NULL)
+            {
+                head = new Node();
+                head->setData(num);
+                head->setNext(NULL);
+                last = head;
+            }
+            else
+            {
+                Node *tmp = new Node();
+                tmp->setData(num);
+                tmp->setNext(NULL);
+                last->setNext(tmp);
+                last = tmp;
+            }
+            break;
+        }
+    }
     return 0;
 }
