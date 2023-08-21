@@ -30,16 +30,19 @@ int main()
 {
     Node *head = NULL;
     Node *last = NULL;
-
+    Node *p, *tmp;
     int choice;
     int num;
+
     while (1)
     {
 
-        cout << "\n0 For Exit\n1 For Add\n2 For List\nEnter choice";
+        cout << "\n0 For Exit\n1 For Add\n2 For List\n3 For InsertAtBeg\n4 for Delete Beg\nEnter choice";
         cin >> choice;
         switch (choice)
         {
+        case 0:
+            exit(0);
         case 1:
             cout << "Enter number";
             cin >> num;
@@ -52,14 +55,37 @@ int main()
             }
             else
             {
-                Node *tmp = new Node();
+                tmp = new Node();
                 tmp->setData(num);
                 tmp->setNext(NULL);
                 last->setNext(tmp);
                 last = tmp;
             }
             break;
-        }
-    }
+
+        case 2:
+            p = head;
+
+            while (p != NULL)
+            {
+                cout << p->getData() << " ";
+                p = p->getNext();
+            }
+            break;
+        case 3:
+            cout << "\nEnter number";
+            cin >> num;
+            tmp = new Node();
+            tmp->setData(num);
+            tmp->setNext(head);
+            head = tmp;
+            break;
+        case 4:
+            p = head;
+            head = head->getNext();
+            delete p;
+            break;
+        } // switch
+    }     // while
     return 0;
 }
