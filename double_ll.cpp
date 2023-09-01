@@ -1,33 +1,18 @@
 #include <iostream>
+
 using namespace std;
 
 class Node
 {
-private:
+public:
     int data;
     Node *next;
-
-public:
-    void setData(int x)
-    {
-        data = x;
-    }
-    void setNext(Node *n)
-    {
-        next = n;
-    }
-    int getData()
-    {
-        return data;
-    }
-    Node *getNext()
-    {
-        return next;
-    }
+    Node *prev;
 };
 
 int main()
 {
+
     Node *head = NULL;
     Node *last = NULL;
     Node *p, *tmp, *q;
@@ -37,7 +22,7 @@ int main()
     while (1)
     {
 
-        cout << "\n0 For Exit\n1 For Add\n2 For List\n3 For InsertAtBeg\n4 for Delete Beg\n5 For Delete Last\n6 for insert any\n7 for delete any\nEnter choice";
+        cout << "\n0 For Exit\n1 For Add\n2 For List\n3 For InsertAtBeg\n4 for Delete Beg\n5 For Delete Last\n6 for insert any\n7 for delete any\n8 For Reverse Display\nEnter choice";
         cin >> choice;
         switch (choice)
         {
@@ -49,16 +34,18 @@ int main()
             if (head == NULL)
             {
                 head = new Node();
-                head->setData(num);
-                head->setNext(NULL);
+                head->data = num;
+                head->next = NULL;
+                head->prev = NULL;
                 last = head;
             }
             else
             {
                 tmp = new Node();
-                tmp->setData(num);
-                tmp->setNext(NULL);
-                last->setNext(tmp);
+                tmp->data = num;
+                tmp->next = NULL;
+                tmp->prev = last;
+                last->next = tmp;
                 last = tmp;
             }
             break;
@@ -68,16 +55,18 @@ int main()
 
             while (p != NULL)
             {
-                cout << p->getData() << " ";
-                p = p->getNext();
+                cout << p->data << " ";
+                p = p->next;
             }
             break;
         case 3:
             cout << "\nEnter number";
             cin >> num;
             tmp = new Node();
-            tmp->setData(num);
-            tmp->setNext(head);
+            tmp->data = num;
+            tmp->next = head;
+            head->prev = tmp;
+            tmp->prev = NULL;
             head = tmp;
             break;
         case 4:
@@ -156,9 +145,3 @@ int main()
     }     // while
     return 0;
 }
-
-// swap
-//  enter source1 number
-//   20
-//  enter source2 number
-//   40
