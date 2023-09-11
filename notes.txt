@@ -274,6 +274,33 @@ push(char x)
 pop peep peek 
 
 ------------------------------------------------------------------------------------------
+root node 
+parent node 
+child node 
+sibling 
+leaf node 
+height : starts with 1 
+level  : starts with 0 
+
+
+
+binary tree -> 
+	parent node -> min : 0 and max : 2 child -> binary tree 
+
+  
+-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
