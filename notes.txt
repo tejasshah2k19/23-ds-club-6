@@ -290,9 +290,25 @@ binary tree ->
   
 -----------------------------------------------------------------------------------------
 
+binar search tree -> BST 
+    1) binary tree 
+    2) parent -> small -> left , parent > right 
+             50
+         40     60   
 
 
 
+BST -> 25 63 54 85 96 3 5 14 15 
+
+
+BST -> 60 52 41 53 64 75 21 32 45 96 
+
+
+recursion -> 
+      void add(){
+        add();//recursion  
+        sub();
+      }
 
 
 
