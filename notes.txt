@@ -310,8 +310,13 @@ recursion ->
         sub();
       }
 
+inOrder   -> left-root-right  
+preOrder  -> root-left-right 
+postOrder -> left-right-root 
 
 
+search node in a tree 
+search data item in  a tree 
 
 
 
