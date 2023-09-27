@@ -80,6 +80,22 @@ int search(Node *root, int key)
     }
 }
 
+int findMax(Node *root) // 100
+{
+    if (root == NULL)
+    {
+        return -1;
+    }
+    else if (root->right != NULL)
+    {
+        return findMax(root->right);
+    }
+    else
+    {
+        return root->data; // 100
+    }
+}
+
 Node *deleteNode(Node *root, int key)
 {
     if (root == NULL)
@@ -94,7 +110,9 @@ Node *deleteNode(Node *root, int key)
         {
             // 2 child
             cout << "\n2 Child";
-            //
+            int max = findMax(root->left);
+            root->data = max;
+            return deleteNode(root->left, max);
         }
         else if (root->left == NULL && root->right == NULL)
         {
