@@ -318,10 +318,18 @@ postOrder -> left-right-root
 search node in a tree 
 search data item in  a tree 
 
+-------------------------------------------
+1) linear search
+2) binary search 
 
 
 
 
+
+selection sort -> 
+  2   5    30    14    10    6 
+      i               j 
+                 min 
 
 
 

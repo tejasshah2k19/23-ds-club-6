@@ -26,15 +26,65 @@ public:
     }
 };
 
+class LL
+{
+public:
+    Node *createNode(int data)
+    {
+        Node *node = new Node();
+        node->setData(data);
+        node->setNext(NULL);
+        return node;
+    }
+
+    Node *createList(int totalNum) // 5
+    {
+        Node *head = NULL, *last, *tmp;
+        int num;
+        for (int i = 1; i <= totalNum; i++)
+        {
+            cout << "Enter number";
+            cin >> num;
+            if (head == NULL)
+            {
+                head = createNode(num);
+                last = head;
+            }
+            else
+            {
+                tmp = createNode(num);
+                last->setNext(tmp);
+                last = tmp;
+            }
+        }
+
+        return head;
+    }
+
+    void display(Node *head)
+    {
+        Node *p = head;
+        while (p != NULL)
+        {
+            cout << p->getData() << " -> ";
+            p = p->getNext();
+        }
+    }
+};
+
 int main()
 {
+    LL ll;
     Node *head = NULL;
     Node *last = NULL;
     Node *p, *tmp, *q;
     int choice;
     int num, source;
 
-    while (1)
+    Node *head2 = ll.createList(5);
+    ll.display(head2);
+
+    while (0)
     {
 
         cout << "\n0 For Exit\n1 For Add\n2 For List\n3 For InsertAtBeg\n4 for Delete Beg\n5 For Delete Last\n6 for insert any\n7 for delete any\nEnter choice";
@@ -48,9 +98,8 @@ int main()
             cin >> num;
             if (head == NULL)
             {
-                head = new Node();
-                head->setData(num);
-                head->setNext(NULL);
+                head = ll.createNode(num);
+                // ll.createNode(num);
                 last = head;
             }
             else
