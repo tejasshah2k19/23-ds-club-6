@@ -55,12 +55,14 @@ int main()
                 head->setData(num);
                 head->setNext(head);
                 last = head;
+                // head->prev = NULL  //for double linked list
             }
             else
             {
                 tmp = new Node();
                 tmp->setData(num);
                 tmp->setNext(head);
+                // tmp->prev = last  // for double linked list
                 last->setNext(tmp);
                 last = tmp;
             }
