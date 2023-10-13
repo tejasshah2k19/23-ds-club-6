@@ -333,6 +333,86 @@ selection sort ->
 
 
 
+--------------------------------------------------------------
+
+linkedlist -> stack queue 
+
+
+insert delete 
+
+end insert 
+remove beg 
+
+
+stack -> 
+
+PUSH() 
+
+40 10 
+30 20
+20 30
+10 40
+
+delete -> 
+
+q-> 40 30 20 10  
+    f         r 
+
+--------------------------------------------------
+
+AVL -> 
+  BST 
+   binary tree 
+   1) max 2 child 
+   2) > parent right  
+   3) < parent left 
+   4) balance factor of node must be [-1 0 1]
+       BF|X| = HeightOfleft(x) - HeightOfRight(X)
+
+  imbalance -> rotation 
+  1)  LL :single 
+  2)  RR :single 
+  3)  LR :double 
+  4)  RL :double 
+
+
+  50
+    60      -------->       60 
+      70                50       70
+  RR -> left rotate     
+
+
+       50                   40
+     40    --------->      
+   30                    30      50
+ LL -> right rotate 
+
+
+      50                50                  65
+          70    --->        65    -->  50       70
+      65                       70
+  RL -> right rotate , left rotate  
+
+
+
+      50                   50                45
+ 30         --->       45           -->   30   50 
+      45           30
+  LR -> left rotate , right rotate      
+
+----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
