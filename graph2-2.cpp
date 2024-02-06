@@ -82,6 +82,29 @@ class Graph{
                     }
                 }
 
+        }
+
+        void bfs(int s){
+            map<int,int> visited; 
+            //queue
+            cout<<"\nDFS\n";
+            cout<<s;//1 
+
+            visited.insert(1,1); //1 -> visit true 1 
+            //q.add(s); 
+                while(visited.size() != totalVertex){ 
+                    // s = q.pop();
+                    for(Edge x:list){
+                        if(x.getSrc() == s  && visited[x.getDest()] != 1 ){
+                            cout<<x.getDest();//2 4 6 
+                            visited.insert(x.getDest(),1);//1 2 4  6 
+                            //q.add(x.getDest()); 
+                        }
+                        if(visited.size() == totalVertex){
+                            break; 
+                        }
+                    }
+                }
 
         }
 };
